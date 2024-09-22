@@ -1,0 +1,6 @@
+notify-update: true
+force-double-jump:
+  spawn: true
+  world: false
+  world_nether: false
+  world_the_end: false

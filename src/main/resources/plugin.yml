@@ -1,0 +1,20 @@
+name: DoubleJump
+version: '${project.version}'
+main: org.achymake.doublejump.DoubleJump
+api-version: '1.21'
+prefix: '${project.name}'
+load: STARTUP
+author: AchyMake
+description: '${project.description}'
+commands:
+  doublejump:
+    description: main command
+    permission: doublejump.command.doublejump
+    permission-message: You do not have the permission to execute the command
+permissions:
+  doublejump.command.doublejump:
+    description: toggle
+    default: op
+  doublejump.command.doublejump.reload:
+    description: reload
+    default: op
