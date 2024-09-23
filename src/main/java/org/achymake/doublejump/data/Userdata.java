@@ -1,6 +1,7 @@
 package org.achymake.doublejump.data;
 
 import org.achymake.doublejump.DoubleJump;
+import org.bukkit.GameMode;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -23,6 +24,8 @@ public record Userdata(Player getPlayer) {
         if (hasDoubleJump()) {
             container.remove(getKey("doubleJump"));
         } else container.set(getKey("doubleJump"), PersistentDataType.BOOLEAN, true);
+        if (getPlayer().getGameMode().equals(GameMode.CREATIVE))return;
+        getPlayer().setAllowFlight(hasDoubleJump());
     }
     public boolean hasDoubleJump() {
         var container = getData();

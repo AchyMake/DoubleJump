@@ -6,11 +6,12 @@
 
     <groupId>org.achymake</groupId>
     <artifactId>DoubleJump</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>DoubleJump</name>
     <description>Provides DoubleJump</description>
+    <url>https://github.com/AchyMake/DoubleJump</url>
 
     <properties>
         <java.version>21</java.version>
